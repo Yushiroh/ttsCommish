@@ -38,5 +38,8 @@ label5.grid(row = 4, column = 2, sticky = 'nsew')
 label6.grid(row = 0, column = 4, rowspan = 3, sticky = 'nsew')
 label7.grid(row = 3, column = 4, rowspan = 3, sticky = 'nsew')
 
+
+#sample
+
 # run
 window.mainloop()
