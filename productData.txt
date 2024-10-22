@@ -1,0 +1,55 @@
+barCode = [
+    "4800344001413",
+    "014285002789",
+    "4800496818082",
+    "4807788561848",
+    "4806504712175",
+    "4800361015110"
+]
+
+categoryList = [
+    "Bread",
+    "Condiments",
+    "Condiments",
+    "Medicine",
+    "Canned Goods",
+    "Dairy"
+]
+
+
+productList = [
+    "Pinoy Tasty (450g)",
+    "UFC Banana Catsup (100g)",
+    "Silver Swan Soy Sauce (350mL)",
+    "Biogesic 500mg (10 tablets)",
+    "Mega Mama Hot & Spicy Tuna (155g)",
+    "Nestle Fresh Mlik (1000 mL)",
+]
+
+
+ingridientList = [
+    "Wheat Flour (with Vit. A and Iron),\n Purified Water, Washed Sugar, Pure Vegetable Shortening\n (contains Palm Oil and/or Coconut Oil), Baker's Yeast,\n Iodized Salt, Dough Improver and Calcium Propionate.",
+    "Water, Sugar, Banana, Modified Starch\n as Stabilizer, Iodized Salt, Spices, Vinegar, Sodium Benzoate\n as Preservative, Artificial Colors and Artificial\n Flavor added.",
+    "Water, Blend of Hydrolyzed and Naturally\n Fermented Soybean, Wheat, Iodized Salt, Caramel, and Spices.\n Contains Preservatives: Monosodium Glutamate (MSG),\n Sodium Benzoate as preservative, Monosodium Glutamate\n (flavor enhancer) and Sodium Guanylate as flavor enhancers, and Yeast Extract.",
+    "INSTRUCTIONS Liver Warning. This product contains\n paracetamol. Severe liver damage may occur if: an adult\n or child 12 years old and above takes more than\n 4g of paracetamol in 24 hours, which is the maximum daily\n amount; taken with other medicines containing paracetamol\n (or acetaminophen); an adult has 3 or more alcoholic drinks everyday\n while using this product. Do not use with any other medicine containing\n paracetamol (prescription or nonprescription). Ask a doctor before use\n if the patient has kidney or liver problems. Ask a doctor before use if\n the patient is taking warfarin, blood thinning medicine. Stop use\n and ask a doctor if: new symptoms occur; symptoms do not get better; redness or swelling is\n present; fever gets worse or lasts more than 3 days; pain gets worse or lasts more than 10\n days. If pregnant or breastfeeding, ask a doctor before use. Overdose\n Warning: If more than the recommended dosage has been given, consult a doctor\n or contact a Poison Control Center right away. Quick medical attention is important even if you do not\n notice any signs or symptoms because of the risk of delayed, serious liver damage.",
+    "Tuna flakes, water, soy protein concentrate,\n soya bean oil, spices, monosodium glutamate\n (flavor enhancer), iodized salt, chili powder,\n sugar, and bayleaf",
+    "Fresh Cow's Milk"
+]
+
+allergensList = [
+    "Wheat",
+    "Soybeans",
+    "Soybean and Wheat",
+    "N/A",
+    "Fish and Soy",
+    "Milk",
+]
+
+expDateList = [
+    "October 18, 2024",
+    "April 7, 2025",
+    "October 2026",
+    "February 2028",
+    "May 25, 2027",
+    "March 11, 2025"
+]
