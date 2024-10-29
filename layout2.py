@@ -72,7 +72,9 @@ descTTS = ["1a", "2a", "3a","4a", "5a", "6a"]
 
 nfTTS = ["1b", "2b", "3b","4b", "5b", "6b"]
 
-nfPics = ["nf1", "nf2", "nf3", "nf4", "nf5"]
+nfPics = ["nf1", "nf2", "nf3", "nf4", "nf5", "nf6"]
+
+ttsMode = 1
 
 
 # window
@@ -100,7 +102,7 @@ window.rowconfigure(5, weight = 1)
 
 def ttsFunc(aString,bString):
 
-    if label8["text"] == "Button2":
+    if ttsMode == 1:
         os.system(f'mpg123 recordings/{aString}.mp3')
     else:
         os.system(f'mpg123 recordings/{bString}.mp3')
@@ -108,12 +110,14 @@ def ttsFunc(aString,bString):
     
 
 
-def nfFunc():
+def nfFunc(nfInherit):
+    global ttsMode
 
-    nfDisplay = ImageTk.PhotoImage(Image.open("nfimg/nf1.PNG"))
+    nfDisplay = ImageTk.PhotoImage(Image.open(f"nfimg/{nfInherit}.PNG"))
     panel = tk.Label(window, image=nfDisplay)
     panel.image = nfDisplay
     panel.grid(column=1, row=1, rowspan = 4, columnspan = 4, sticky='nsew')
+    ttsMode = 0
     
 
 
@@ -138,7 +142,7 @@ def labelChanger(a,b,c,d,e,f,g):
     label6.grid(row = 4, column = 3, columnspan = 2, sticky = 'nsew')
 
 label7 = ttk.Button(window, text = 'Text to Speech', command = lambda: ttsFunc(storedDesc, storedNF))
-label8 = ttk.Button(window, text = 'Display Nutrition Facts', command = lambda: nfFunc())
+label8 = ttk.Button(window, text = 'Display Nutrition Facts', command = lambda: nfFunc(storedPic))
 
 codeEntry = ttk.Entry(window)
 label7.grid(row = 0, column = 6, rowspan = 3, sticky = 'nsew')
@@ -148,8 +152,11 @@ codeEntry.grid(row = 5, column = 2, rowspan = 2)
 
 #sample
 def func(entry):
+    global ttsMode
     global storedDesc
     global storedNF
+    global storedPic
+    ttsMode = 1
     sampleText = codeEntry.get()
     
     if sampleText == barCode[0]:
@@ -157,36 +164,42 @@ def func(entry):
         labelChanger(categoryList[0], productList[0], priceList[0], ingridientList[0], allergensList[0], expDateList[0], barCode[0])
         storedDesc = descTTS[0]
         storedNF = nfTTS[0]
+        storedPic = nfPics[0]
 
     if sampleText == barCode[1]:
         print("prod2")
         labelChanger(categoryList[1], productList[1], priceList[1], ingridientList[1], allergensList[1], expDateList[1], barCode[1] )
         storedDesc = descTTS[1]
         storedNF = nfTTS[1]
+        storedPic = nfPics[1]
 
     if sampleText == barCode[2]:
         print("prod3")
         labelChanger(categoryList[2], productList[2], priceList[2], ingridientList[2], allergensList[2], expDateList[2], barCode[2])
         storedDesc = descTTS[2]
         storedNF = nfTTS[2]
+        storedPic = nfPics[2]
 
     if sampleText == barCode[3]:
         print("prod4")
         labelChanger(categoryList[3], productList[3], priceList[3], ingridientList[3], allergensList[3], expDateList[3], barCode[3])
         storedDesc = descTTS[3]
         storedNF = nfTTS[3]
+        storedPic = nfPics[5]
 
     if sampleText == barCode[4]:
         print("prod5")
         labelChanger(categoryList[4], productList[4], priceList[4], ingridientList[4], allergensList[4], expDateList[4], barCode[4])
         storedDesc = descTTS[4]
         storedNF = nfTTS[4]
+        storedPic = nfPics[3]
 
     if sampleText == barCode[5]:
         print("prod6")
         labelChanger(categoryList[5], productList[5], priceList[5], ingridientList[5], allergensList[5], expDateList[5], barCode[5])
         storedDesc = descTTS[5]
         storedNF = nfTTS[5]
+        storedPic = nfPics[4]
 
     codeEntry.delete(0, tk.END)
 
